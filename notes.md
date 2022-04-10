@@ -18,3 +18,6 @@ But to execute it we must install a plugin '@babel/plugin-transform-runtime', an
 '.babelrc' build.
 One very important thing to got in mind is that babel only compiles javascript code, so we must copy
 the html, css, icons, etc, files so for that we install 'ncp' module.
+
+to finish we will upload the code to github and then to a server heroku for the app and mongodb atlas
+for the database.
