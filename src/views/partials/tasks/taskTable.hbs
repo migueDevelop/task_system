@@ -1,0 +1,49 @@
+{{#if tasks}}
+<table class="table table-bordered table-hover table-dark">{{!-- Table format --}}
+    <thead>{{!-- Headboard --}}
+        <tr>{{!-- R ow --}}
+            <th>N.</th>{{!-- Headers --}}
+            <th>Title</th>
+            <th>Description</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tasks}} {{!-- We go through the elements in the document --}}
+        <tr>
+            <td>{{!-- Cells --}}
+                {{@index}}{{!-- this is a counter for the number section. --}}
+            </td>
+            <td>
+                {{title}}
+            </td>
+            <td>
+                <p>{{description}}</p>
+            </td>
+            <td>
+                {{!-- We create links and style them as buttons --}}
+
+                {{!-- We create a conditional with hbs methods to know the boolean value. --}}
+                {{#if done}}
+                <a href="/task/{{_id}}/toggleDone" class="btn btn-dark">Undone</a>
+                {{else}}
+                <a href="/task/{{_id}}/toggleDone" class="btn btn-success">Done</a>
+                {{/if}}
+
+                <a href="/task/{{_id}}/delete" class="btn btn-danger">Delete</a>
+                <a href="/task/{{_id}}/edit" class="btn btn-info">Update</a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+        <h1 class="text-black">No tasks</h1>
+        <img src="/icons/paper.svg" class="w-75">
+    </div>
+</div>
+
+{{/if}}

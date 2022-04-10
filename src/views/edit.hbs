@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body bg-dark p-4 text-white rounded-0">
+                <form action="/task/{{task._id}}/edit" method="post"> {{!-- We send it to edit route but in the post
+                    method, and we add '_id to access to the id' '/' at the end to direct to a route with parameters--}}
+                    <h1>Update a task</h1>
+                    <div class="mb-3"><input type="text" name="title" placeholder="Title" value="{{task.title}}"
+                            class="from-control rounded-0 bg-dark text-white border-white"></div>
+                    <div class="mb-3">
+                        <textarea name="description" placeholder="Add a description" rows="3"
+                            class="from-control rounded-0 bg-dark text-white">{{task.description}}</textarea>
+                    </div>
+                    {{!-- The value of the task works diferent than the value of the input, you have to put the content
+                    inside the tags --}}
+                    <button>Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

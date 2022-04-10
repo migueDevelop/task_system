@@ -1,0 +1,11 @@
+##Environment variables
+.env
+
+#Node dependecies
+node_modules
+
+#Testing file
+testing.js
+
+#Build file for production
+dist
