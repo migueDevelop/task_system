@@ -21,3 +21,7 @@ the html, css, icons, etc, files so for that we install 'ncp' module.
 
 To finish we will upload the code to github and then to a server heroku for the app and mongodb atlas
 for the database.
+
+Conect to an app in heroku cli use heroku logs --tail --app 'app name'
+
+With babel we must add a '@babel/runtime', is the module that babel uses to compile the code in production.
