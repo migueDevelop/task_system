@@ -12,4 +12,4 @@
 + Now use `npm start`.
 
 ### Notes
-+ If the port is already in use, change it on `config.js` file.
++ If the port is already in use, change it on `config.js` file, you can also chage the database connection.
